@@ -12,10 +12,6 @@ function SetYSpeed(speed){
 function SetXSpeed(speed){
 	_xSpeed = speed;
 }
-function LiftByGravityFactor(factor){
-	_ySpeed -= _gravity*factor;	
-}
-
 function SetSpeeds(xSpeed, ySpeed){
 	_xSpeed = xSpeed;
 	_ySpeed = ySpeed;
@@ -26,9 +22,6 @@ function IsFalling(){
 
 _processPhysics = function(){
 	_ySpeed = min(_ySpeed + _gravity, _maxVelocity);
-	
-	var previousX = x;
-	var previousY = y;
 	
 	var futureX = x + _xSpeed;
 	var futureY = y + _ySpeed;
@@ -86,4 +79,6 @@ _processPhysics = function(){
 	
 	y = futureY;
 	x = futureX;
+	
+	_isFalling = !place_meeting(x, y + 2, NoFallThrough);
 }
