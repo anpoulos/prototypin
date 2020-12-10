@@ -20,6 +20,11 @@ function IsFalling(){
 	return _isFalling;
 }
 
+function IsObjectAncestor(object, ancestorIndex){
+	var objectIndex = object.object_index;
+	return objectIndex == ancestorIndex || object_is_ancestor(objectIndex, ancestorIndex);
+}
+
 _processPhysics = function(){
 	_ySpeed = min(_ySpeed + _gravity, _maxVelocity);
 	
