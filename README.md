@@ -1,2 +1,2 @@
 # prototypin
-a sci fi samurai based jedi fighting game
+A space for my prototypes that I want to share with the public
