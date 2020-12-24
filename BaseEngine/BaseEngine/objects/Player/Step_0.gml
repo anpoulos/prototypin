@@ -12,6 +12,6 @@ if(keyboard_check(ord("A")) || keyboard_check(ord("D"))){
 	}
 }
 
-if(keyboard_check(ord("W"))){
+if(!_isFalling && keyboard_check(ord("W"))){
 	SetYSpeed(-25);
 }
